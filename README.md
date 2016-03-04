@@ -1,16 +1,13 @@
-# Smartcard Webconnector
+# Smartcard URL Trigger
 
-A small interface to read and check a smartcard and use it as an Identification
-in a Webservice
+Smartcard to Browser Bridge: Uses the ID of a Smartcard to call a defined URL
 
 ## Usage
-python connector.py --url=URL (--resource=RESOURCE)  
-python connector.py -U URL (-R RESOURCE)  
-python connector.py --help  
+python smartcard_bridge.py --url=URL (--resource=RESOURCE)  
+python smartcard_bridge.py -U URL (-R RESOURCE)  
+python smartcard_bridge.py --help  
 
-* URL is the URL the Card-Id will be send to
-* RESOURCE is used as an universal Parameter (e.g. to tell from which checkpoint
-somone authenticates)
+* URL is the URL the CardID will be attached to
 
 ### Requirements
 You'll need this stuff in order to be able to use this script.
