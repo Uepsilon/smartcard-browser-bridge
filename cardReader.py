@@ -1,5 +1,5 @@
 import sys
-
+from browserHandler import browserHandler
 from smartcard.util import *
 
 # import RPi.GPIO as GPIO
@@ -27,6 +27,7 @@ class cardReader(object):
             print "Inserted Card with UID: " + str(cardUID)
 
             # TODO: Open Browser here
+            browserHandler(url + "/" + cardUID)
 
         for card in removedcards:
 
