@@ -56,6 +56,9 @@ if __name__ == '__main__':
         args = docopt(__doc__, version='Smartcard smartcardBride: 0.1')
 
         bridge = smartcardBridge(args)
+        
+        while True:
+            time.sleep(1)
     finally:
         try:
             bridge.shutdown()
