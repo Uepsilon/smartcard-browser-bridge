@@ -1,11 +1,6 @@
-import os
+import subprocess
 
-class browserHandler(object):
-    browserURL = None;
-    def __init__(self, url):
-        self.browserURL = url
-        open()
-
-    def open(self):
-        openBrowserCmd = "chromium-browser --kiosk --disable-session-crashed-bubble --noerrdialogs" + self.browserURL
-        os.cmd(openBrowserCmd)
+def openBrowser(url):
+    print "Opening URL: "+ url
+    openBrowserCmd = "DISPLAY=:0 chromium-browser --kiosk --disable-session-crashed-bubble --noerrdialogs %s" % url
+    subprocess.Popen(openBrowserCmd, shell=True)

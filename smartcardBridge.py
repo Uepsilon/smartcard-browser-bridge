@@ -35,7 +35,7 @@ class smartcardBridge():
         # feedbackHandler.setup()
 
         self.cardmonitor = CardMonitor()
-        self.cardobserver = cardsmartcardBride(args)
+        self.cardobserver = cardReader(args)
 
         self.addCardObserver(self.cardobserver)
 

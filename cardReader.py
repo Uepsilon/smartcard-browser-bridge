@@ -1,8 +1,6 @@
 import sys
-from browserHandler import browserHandler
+import browserHandler
 from smartcard.util import *
-
-# import RPi.GPIO as GPIO
 
 # define the apdus used in this script
 GET_RESPONSE = [0XA0, 0XC0, 0x00, 0x00]
@@ -21,15 +19,17 @@ class cardReader(object):
             # Create connection
             connection = card.createConnection()
             connection.connect()
-
             # Get Card-UID
             cardUID = self.getUID(connection)
             print "Inserted Card with UID: " + str(cardUID)
 
-            # TODO: Open Browser here
-            browserHandler(url + "/" + cardUID)
+            # trigger browser
+            browserHandler.openBrowser(url + "/" + cardUID)
 
         for card in removedcards:
+            # TODO: Handle removed card here
+            print "Card Removed"
+
 
     def getUID(self, connection):
         # Read UID from Card
