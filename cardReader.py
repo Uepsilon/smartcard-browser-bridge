@@ -20,11 +20,11 @@ class cardReader(object):
             connection = card.createConnection()
             connection.connect()
             # Get Card-UID
-            cardUID = self.getUID(connection)
-            print "Inserted Card with UID: " + str(cardUID)
+            cardUID = "".join(map(str, self.getUID(connection)))
+            print "Inserted Card with UID: " + cardUID
 
             # trigger browser
-            browserHandler.openBrowser(url + "/" + cardUID)
+            browserHandler.openBrowser(self.url + "/" + cardUID)
 
         for card in removedcards:
             # TODO: Handle removed card here
