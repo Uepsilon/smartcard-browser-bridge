@@ -1,11 +1,11 @@
-# Smartcard URL Trigger
+# Smartcard Browser Bridge
 
-Smartcard to Browser Bridge: Uses the ID of a Smartcard to call a defined URL
+Smartcard Browser Bridge: Uses the ID of a Smartcard to call a defined URL
 
 ## Usage
-python smartcard_bridge.py --url=URL (--resource=RESOURCE)  
-python smartcard_bridge.py -U URL (-R RESOURCE)  
-python smartcard_bridge.py --help  
+python smartcardBridge.py --url=URL (--resource=RESOURCE)  
+python smartcardBridge.py -U URL (-R RESOURCE)  
+python smartcardBridge.py --help  
 
 * URL is the URL the CardID will be attached to
 
