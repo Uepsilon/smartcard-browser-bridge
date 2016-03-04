@@ -55,7 +55,7 @@ if __name__ == '__main__':
     try:
         args = docopt(__doc__, version='Smartcard smartcardBride: 0.1')
 
-        bridge = smartcardBride(args)
+        bridge = smartcardBridge(args)
     finally:
         try:
             bridge.shutdown()
